@@ -5,13 +5,7 @@ const root = path.resolve(__dirname, '..');
 module.exports = {
   mode: 'development',
   context: root,
-  entry: {
-    main: path.resolve(root, 'app', 'src', 'index.js')
-  },
-  resolve: {
-    modules: [path.resolve(root, 'node_modules')],
-    extensions: ['*', '.js', '.jsx']
-  },
+  entry: path.resolve(root, 'app', 'src', 'index.js'),
   output: {
     path: path.resolve(root, 'dist'),
     publicPath: '/',
@@ -22,7 +16,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        use: 'babel-loader'
       },
       {
         test: /\.scss$/,
@@ -31,7 +25,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
       fetch: 'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch'

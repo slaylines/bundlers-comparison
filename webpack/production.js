@@ -5,12 +5,7 @@ const root = path.resolve(__dirname, '..');
 module.exports = {
   mode: 'production',
   context: root,
-  entry: {
-    main: path.resolve(root, 'app', 'src', 'index.js')
-  },
-  resolve: {
-    extensions: ['*', '.js', '.jsx']
-  },
+  entry: path.resolve(root, 'app', 'src', 'index.js'),
   output: {
     path: path.resolve(root, 'dist'),
     publicPath: '/',
@@ -21,7 +16,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        use: 'babel-loader'
       },
       {
         test: /\.scss$/,
