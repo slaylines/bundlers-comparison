@@ -7,8 +7,8 @@
   "author": "TehCookies <contact@tehcookies.com>",
   "license": "MIT",
   "scripts": {
-    "serve:webpack": "webpack-dev-server --progress --colors --config ./webpack/development.js",
-    "build:webpack": "NODE_ENV=production webpack -p --progress --colors --config ./webpack/production.js"
+    "webpack:serve": "webpack-dev-server --progress --colors --config ./webpack/development.js",
+    "webpack:build": "NODE_ENV=production webpack -p --progress --colors --config ./webpack/production.js"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
