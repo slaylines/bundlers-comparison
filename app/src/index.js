@@ -1,6 +1,5 @@
 /* eslint-disable */
 import SC from 'soundcloud';
-import { AppContainer } from 'react-hot-loader';
 /* eslint-enable */
 
 import React from 'react';
@@ -16,11 +15,9 @@ const store = configureStore();
 
 function render(Component) {
   ReactDOM.render(
-    <AppContainer>
-      <Provider store={store}>
-        <Component />
-      </Provider>
-    </AppContainer>,
+    <Provider store={store}>
+      <Component />
+    </Provider>,
     document.getElementById('app'),
   );
 }

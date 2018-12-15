@@ -1,15 +1,18 @@
-var webpack = require('webpack');
-var path = require('path');
+const webpack = require('webpack');
+const path = require('path');
+const root = path.resolve(__dirname, '..');
 
 module.exports = {
+  mode: 'production',
+  context: root,
   entry: {
-    main: path.resolve(__dirname, 'src', 'index.js')
+    main: path.resolve(root, 'app', 'src', 'index.js')
   },
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(root, 'dist'),
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -18,7 +21,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader']
+        loader: 'babel-loader'
       },
       {
         test: /\.scss$/,
@@ -29,16 +32,6 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       fetch: 'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch'
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
     })
   ]
 };
