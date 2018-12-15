@@ -1,6 +1,7 @@
 .DS_Store
 .cache
 node_modules
-dist/bundle.js
-dist/server
 yarn-error.log
+
+dist/webpack/bundle.js
+dist/parcel/*

@@ -7,7 +7,7 @@ module.exports = {
   context: root,
   entry: path.resolve(root, 'app', 'src', 'index.js'),
   output: {
-    path: path.resolve(root, 'dist'),
+    path: path.resolve(root, 'dist', 'webpack'),
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -31,7 +31,7 @@ module.exports = {
     })
   ],
   devServer: {
-    contentBase: path.resolve(root, 'dist'),
+    contentBase: path.resolve(root, 'dist', 'webpack'),
     publicPath: '/',
     compress: true,
     hot: true,

@@ -7,7 +7,7 @@ module.exports = {
   context: root,
   entry: path.resolve(root, 'app', 'src', 'index.js'),
   output: {
-    path: path.resolve(root, 'dist'),
+    path: path.resolve(root, 'dist', 'webpack'),
     publicPath: '/',
     filename: 'bundle.js'
   },
