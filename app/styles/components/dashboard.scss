@@ -1,0 +1,17 @@
+.dashboard {
+
+  display: flex;
+  flex-direction: row;
+
+  &-main {
+    margin-right: $padding;
+    flex: 3;
+  }
+
+  &-side {
+    flex: 1;
+    float:right;
+    width:25%;
+  }
+
+}

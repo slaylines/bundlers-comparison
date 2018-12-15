@@ -1,0 +1,102 @@
+.player {
+
+  background: $nav;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  border-top: $darkBorder;
+  z-index: 1;
+
+  transition: height 0.2s;
+  -webkit-transition: height 0.2s;
+  transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+
+  &-visible {
+    height: $padding * 3 + 10;
+  }
+
+  &-content {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    height: 100%;
+    margin-left: 20%;
+    flex-grow: 1;
+
+    &-name {
+      width: 50%;
+
+    }
+    &-link {
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    &-action {
+      font-size: $bigIcon;
+      cursor: pointer;
+
+      &:hover {
+        color: $mainColor;
+      }
+
+      i {
+        width: $bigIcon;
+
+        &.is-favorite {
+          color: $mainColor;
+        }
+      }
+    }
+
+    div {
+      margin: auto $padding;
+      min-width: $padding * 2;
+    }
+
+  }
+
+  .randomSelected{
+    color: $mainColor;
+  }
+
+  .repeatSelected{
+    color: $mainColor;
+  }
+
+  .player-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .player-status {
+    height: 10px;
+    border-bottom: $darkBorder;
+    cursor: pointer;
+
+    .player-status-bar {
+      width: 0;
+      transition: width 0.3s linear;
+      background-color: #61B25A;
+      height: 100%;
+      position: relative;
+
+      .player-status-bar-dragger {
+        width: 20px;
+        height: 10px;
+        position: absolute;
+        right: -8px;
+        background-color: #f5f5f5;
+        border: 1px solid #8dc572;
+        top: -1px;
+        cursor: pointer;
+        border-radius: 3px;
+      }
+    }
+  }
+
+}

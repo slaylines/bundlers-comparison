@@ -1,0 +1,33 @@
+body {
+  background: $background;
+  font: 400 13px "CoreSans", Arial,sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: $fontColor;
+  letter-spacing: .02em;
+  position: relative;
+  margin: ($padding * 4) ($padding * 2);
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: $fontColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $hyperlinkHover;
+  }
+
+  &:active {
+    color: $hyperlinkActive;
+  }
+
+  &:visited {
+    color: $hyperlinkVisited;
+  }
+}

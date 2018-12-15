@@ -1,0 +1,42 @@
+.list {
+
+  h2 {
+    margin-top: 0;
+  }
+
+  i.fa-chevron-up, i.fa-chevron-down {
+    opacity: 0;
+    transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+    transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
+  }
+
+  &:hover i {
+    opacity: 1;
+  }
+
+  &-content {
+    height: $padding * 8;
+    overflow: hidden;
+    border: $border;
+    background: $backgroundSecondary;
+
+    display: flex;
+    flex-direction: column;
+
+    li {
+      border-bottom: $border;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+  }
+
+  .more-visible &-content {
+    height: 100%;
+  }
+
+}
