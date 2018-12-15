@@ -1,0 +1,9 @@
+{
+  "name": "bundlers-comparison",
+  "version": "1.0.0",
+  "description": "Performance and usage comparison of Webpack 4, Rollup, Parcel and FuseBox bundlers.",
+  "main": "app/src/index.js",
+  "repository": "https://github.com/tehcookies/bundlers-comparison.git",
+  "author": "TehCookies <contact@tehcookies.com>",
+  "license": "MIT"
+}
