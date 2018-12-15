@@ -1,0 +1,30 @@
+.playlist-track {
+
+  height: 40px;
+  display: flex;
+  overflow: hidden;
+  border-bottom: $darkBorder;
+
+  &:hover .action {
+    opacity: 1;
+    margin: auto ($padding / 2);
+  }
+
+  &-content {
+    position: relative;
+    padding: $padding / 4;
+    background: $nav;
+    position: relative;
+    width: 100%;
+
+    a {
+      float: left;
+      width: $padding * 13;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+}

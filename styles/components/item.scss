@@ -1,0 +1,32 @@
+.item {
+
+  height: 40px;
+  display: flex;
+
+  &:hover .action {
+    opacity: 1;
+    margin: auto ($padding / 2);
+  }
+
+  &-content {
+    position: relative;
+    width: 100%;
+    padding: $padding / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    a {
+      overflow: hidden;
+      height: 14px;
+      span {
+        line-height: 14px;
+      }
+    }
+
+  }
+
+  .is-active {
+    color: $mainColor;
+  }
+}

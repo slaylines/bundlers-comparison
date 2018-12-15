@@ -1,0 +1,74 @@
+.track {
+  display: flex;
+  height: $padding * 3;
+  margin: ($padding / 2) 0;
+  background: $backgroundSecondary;
+  border: $border;
+  position: relative;
+  transition: all 0.2s;
+
+  &-waveform {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 120px; // artwork size
+    width: calc(100% - 120px); // artwork size
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+
+    &-json {
+      flex: 1;
+    }
+  }
+
+  &-artwork {
+    overflow: hidden;
+  }
+
+  &-content {
+    padding: ($padding / 4);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-header, &-footer {
+      display: inline-flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &-footer-actions {
+      .button-ghost {
+        color: $fontColor;
+        border: 1px solid $fontColor;
+      }
+    }
+  }
+
+  &:hover, &-visible {
+
+    .track-waveform {
+      opacity: 0.2;
+    }
+
+   .track-content-footer-actions {
+      .button-ghost {
+        color: $mainColor;
+        border: 1px solid $mainColor;
+      }
+    }
+
+    .artwork-action-overlay {
+      background: rgba(255, 255, 255, .7);
+      opacity: 1;
+    }
+  }
+
+  .active-duration-filter {
+    color: $mainColor;
+  }
+
+}
