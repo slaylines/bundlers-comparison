@@ -1,7 +1,3 @@
-/* eslint-disable */
-import SC from 'soundcloud';
-/* eslint-enable */
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -9,7 +5,7 @@ import { Provider } from 'react-redux';
 import configureStore from './stores/configureStore';
 import App from './components/App';
 
-require('../styles/index.scss');
+import '../styles/index.scss';
 
 const store = configureStore();
 

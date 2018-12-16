@@ -35,7 +35,8 @@ module.exports = {
     publicPath: '/',
     compress: true,
     hot: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    open: true
   },
   devtool: 'source-map'
 };

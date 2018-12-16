@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Waveform from 'waveform.js';
 import { normalizeSamples } from '../../services/track';
 
 const WAVE_COLOR = '#61B25A';

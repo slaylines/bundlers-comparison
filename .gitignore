@@ -2,6 +2,8 @@
 .cache
 node_modules
 yarn-error.log
+stats.html
 
-dist/webpack/bundle.js
+dist/webpack/bundle*
 dist/parcel/*
+dist/rollup/bundle*
