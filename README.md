@@ -8,6 +8,8 @@ This comparison doesn't pretend to be objective and was done for personal purpos
 
 ## Machine Specs
 
+| Attribute | Description                             |
+|-----------|-----------------------------------------|
 | Name      | MacBook Pro (Retina, 15-inch, Mid 2015) |
 | Processor | 2,2 GHz Intel Core i7                   |
 | Memory    | 16 GB 1600 MHz DDR3                     |
