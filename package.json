@@ -1,7 +1,7 @@
 {
   "name": "bundlers-comparison",
   "version": "1.0.0",
-  "description": "Performance and usage comparison of Webpack 4, Rollup, and Parcel bundlers.",
+  "description": "Performance and usage comparison of Webpack 4, Parcel and Rollup bundlers.",
   "main": "app/src/index.js",
   "repository": "https://github.com/tehcookies/bundlers-comparison.git",
   "author": "TehCookies <contact@tehcookies.com>",
@@ -12,7 +12,8 @@
     "parcel:serve": "parcel serve app/src/index.html --open --out-dir ./dist/parcel",
     "parcel:build": "NODE_ENV=production parcel build app/src/index.html --out-dir ./dist/parcel --public-url ./",
     "rollup:serve": "rollup --watch --config ./rollup/development.js",
-    "rollup:build": "NODE_ENV=production rollup --config ./rollup/production.js"
+    "rollup:build": "NODE_ENV=production rollup --config ./rollup/production.js",
+    "clear": "rimraf .cache && rimraf node_modules/.cache && rimraf dist/**/bundle* && rimraf dist/parcel/*"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -25,6 +26,7 @@
     "imports-loader": "^0.8.0",
     "node-sass": "^4.11.0",
     "parcel-bundler": "^1.10.3",
+    "rimraf": "^2.6.2",
     "rollup": "^0.67.4",
     "rollup-plugin-babel": "^4.1.0",
     "rollup-plugin-commonjs": "^9.2.0",
