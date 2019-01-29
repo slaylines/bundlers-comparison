@@ -7,8 +7,8 @@
   "author": "TehCookies <contact@tehcookies.com>",
   "license": "MIT",
   "scripts": {
-    "webpack:serve": "webpack-dev-server --progress --colors --config ./webpack/development.js",
-    "webpack:build": "NODE_ENV=production webpack -p --progress --colors --config ./webpack/production.js",
+    "webpack:serve": "webpack-dev-server --colors --config ./webpack/development.js",
+    "webpack:build": "NODE_ENV=production webpack -p --colors --config ./webpack/production.js",
     "parcel:serve": "parcel serve app/src/index.html --open --out-dir ./dist/parcel",
     "parcel:build": "NODE_ENV=production parcel build app/src/index.html --out-dir ./dist/parcel --public-url ./",
     "rollup:serve": "rollup --watch --config ./rollup/development.js",

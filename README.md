@@ -22,9 +22,9 @@ Here are the results for production JavaScript bundle size.
 
 | Bundler | Minified | Gzipped |
 |---------|----------|---------|
-| Webpack | 709 kB   | 192 kB  |
-| Parcel  | 687 kB   | 180 kB  |
-| Rollup  | 464 kB   | 139 kB  |
+| Webpack | 648 kB   | 185 kB  |
+| Parcel  | 623 kB   | 164 kB  |
+| Rollup  | 432 kB   | 129 kB  |
 
 ## Development Build
 
@@ -32,9 +32,9 @@ Here are the results for development build times. For Parcel there are two value
 
 | Bundler |       Start       | Reload  |
 |---------|-------------------|---------|
-| Webpack | 5226 ms           | 967 ms  |
-| Parcel  | 8488 ms (2445 ms) | 692 ms  |
-| Rollup  | 12230 ms          | 3840 ms |
+| Webpack | 5040 ms           | 861 ms  |
+| Parcel  | 9864 ms (2445 ms) | 753 ms  |
+| Rollup  | 11463 ms          | 5126 ms |
 
 ## Production Build
 
