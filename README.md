@@ -20,31 +20,34 @@ This comparison doesn't pretend to be objective and was done for personal purpos
 
 Here are the results for production JavaScript bundle size.
 
-| Bundler | Minified | Gzipped |
-|---------|----------|---------|
-| Webpack | 648 kB   | 185 kB  |
-| Parcel  | 623 kB   | 164 kB  |
-| Rollup  | 432 kB   | 129 kB  |
+| Bundler     | Minified | Gzipped |
+|-------------|----------|---------|
+| Webpack     | 636 kB   | 184 kB  |
+| Webpack-adv | 624 kB   | 184 kB  |
+| Parcel      | 623 kB   | 165 kB  |
+| Rollup      | 429 kB   | 129 kB  |
 
 ## Development Build
 
 Here are the results for development build times. For Parcel there are two values for start since it has built-in cache. All the values is an average over 10 runs.
 
-| Bundler |       Start       | Reload  |
-|---------|-------------------|---------|
-| Webpack | 5040 ms           | 861 ms  |
-| Parcel  | 9864 ms (2445 ms) | 753 ms  |
-| Rollup  | 11463 ms          | 5126 ms |
+| Bundler     |       Start       | Reload  |
+|-------------|-------------------|---------|
+| Webpack     | 5040 ms           | 861 ms  |
+| Webpack-adv | 3781 ms           | 264 ms  |
+| Parcel      | 9864 ms (2445 ms) | 753 ms  |
+| Rollup      | 11463 ms          | 5126 ms |
 
 ## Production Build
 
 Here are the results for production build times. For Parcel and Webpack there are two values since both have cache. Webpack has cache for [Terser Plugin](https://github.com/webpack-contrib/terser-webpack-plugin). All the values is an average over 10 runs.
 
-| Bundler |        Time        |
-|---------|--------------------|
-| Webpack | 15421 ms (4686 ms) |
-| Parcel  | 11192 ms (1271 ms) |
-| Rollup  | 16440 ms           |
+| Bundler     |        Time        |
+|-------------|--------------------|
+| Webpack     | 15421 ms (4686 ms) |
+| Webpack-adv | 15114 ms (3824 ms) |
+| Parcel      | 11192 ms (1271 ms) |
+| Rollup      | 16440 ms           |
 
 ## Usage Notes
 
@@ -78,6 +81,13 @@ babel-loader
 style-loader
 css-loader
 sass-loader
+```
+
+Advanced configuration also requires
+
+```
+cache-loader
+thread-loader
 ```
 
 ### Parcel
@@ -122,6 +132,6 @@ rollup-plugin-visualizer
 
 ## Conclusion
 
-- Use Webpack 4 by default. It's flexible and user-friendly enough for app development. There is a learning curve, but once you get it, it's not very complicated to use. The documentation became a lot better last time and the community is very big.
+- Use Webpack 4 by default. It's flexible and user-friendly enough for app development. There is a learning curve, but once you get it, it's not very complicated to use. The documentation became a lot better last time and the community is very big. After getting familiar with core concepts you can get a much smoother and snappier work flow than with other bundlers.
 - Use Parcel for simple scenarios. It's easy to setup and very fast. It's also a good option for beginners. Don't use it if you wish to do customizations and tweaks for your builds, in the long term it may cause problems. The documentation may lack some of the important details and it's a pain to fix little quirks. It's also still immature, so expect to face with bugs.
 - Use Rollup for library development and if bundle size is something very critical for you. The developer's experience is not the best here and you need to understand the tradeoffs for a small bundle size and minimalistic philosophy behind it. It's a solid tool though. The documentation would be better if it could provide more real-life examples of usage for common scenarios.
