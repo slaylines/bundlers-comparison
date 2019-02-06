@@ -74,6 +74,5 @@ module.exports = {
     historyApiFallback: true,
     open: true
   },
-  // devtool: 'source-map'
   devtool: process.env.npm_config_sourcemaps ? 'inline-source-map' : 'inline-eval',
 };
