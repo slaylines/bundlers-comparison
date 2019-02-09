@@ -20,34 +20,34 @@ This comparison doesn't pretend to be objective and was done for personal purpos
 
 Here are the results for production JavaScript bundle size.
 
-| Bundler     | Minified | Gzipped |
-|-------------|----------|---------|
-| Webpack     | 636 kB   | 184 kB  |
-| Webpack-adv | 624 kB   | 184 kB  |
-| Parcel      | 623 kB   | 165 kB  |
-| Rollup      | 429 kB   | 129 kB  |
+| Bundler            | Minified | Gzipped |
+|--------------------|----------|---------|
+| Webpack            | 697 kB   | 191 kB  |
+| Webpack (advanced) | 697 kB   | 191 kB  |
+| Parcel             | 687 kB   | 180 kB  |
+| Rollup             | 461 kB   | 138 kB  |
 
 ## Development Build
 
 Here are the results for development build times. For Parcel there are two values for start since it has built-in cache. All the values is an average over 10 runs.
 
-| Bundler     |       Start       | Reload  |
-|-------------|-------------------|---------|
-| Webpack     | 5040 ms           | 861 ms  |
-| Webpack-adv | 3781 ms           | 264 ms  |
-| Parcel      | 9864 ms (2445 ms) | 753 ms  |
-| Rollup      | 11463 ms          | 5126 ms |
+| Bundler            |       Start       | Reload  |
+|--------------------|-------------------|---------|
+| Webpack            | 4776 ms           | 923 ms  |
+| Webpack (advanced) | 3745 ms           | 195 ms  |
+| Parcel             | 8409 ms (2459 ms) | 585 ms  |
+| Rollup             | 11570 ms          | 3790 ms |
 
 ## Production Build
 
 Here are the results for production build times. For Parcel and Webpack there are two values since both have cache. Webpack has cache for [Terser Plugin](https://github.com/webpack-contrib/terser-webpack-plugin). All the values is an average over 10 runs.
 
-| Bundler     |        Time        |
-|-------------|--------------------|
-| Webpack     | 15421 ms (4686 ms) |
-| Webpack-adv | 15114 ms (3824 ms) |
-| Parcel      | 11192 ms (1271 ms) |
-| Rollup      | 16440 ms           |
+| Bundler            |        Time        |
+|--------------------|--------------------|
+| Webpack            | 15991 ms (3555 ms) |
+| Webpack (advanced) | 16089 ms (3617 ms) |
+| Parcel             | 12098 ms (1301 ms) |
+| Rollup             | 16200 ms           |
 
 ## Usage Notes
 
